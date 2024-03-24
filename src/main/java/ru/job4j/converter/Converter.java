@@ -16,10 +16,8 @@ public class Converter {
 
     public static void main(String[] args) {
         float input = 420;
-
         float outputEuro = Converter.rubleToEuro(input);
         passed(6, outputEuro, "euro");
-
         float outputDollar = Converter.rubleToDollar(input);
         passed(7, outputDollar, "dollars");
     }

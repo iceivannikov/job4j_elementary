@@ -9,7 +9,6 @@ public class UniqueValues {
         int left = 0;
         int right = 0;
         int size = 0;
-
         while (left < arr.length) {
             while (right < arr.length && arr[left] == arr[right]) {
                 right++;
