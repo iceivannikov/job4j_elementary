@@ -42,4 +42,24 @@ class PointTest {
         double output = point1.distance(point2);
         assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
+
+    @Test
+    void when3Minus6to7Minus7toMinus77then4Dot12() {
+        Point point1 = new Point(3, -6);
+        Point point2 = new Point(7, -7);
+        Point point3 = new Point(-7, 7);
+        double expected = 16.4;
+        double output = point1.distance3d(point3);
+        assertThat(output).isEqualTo(expected, withPrecision(0.01));
+    }
+
+    @Test
+    void when68to06to4Minus5then13Dot15() {
+        Point point1 = new Point(6, 8);
+        Point point2 = new Point(0, 6);
+        Point point3 = new Point(4, -5);
+        double expected = 13.15;
+        double output = point1.distance3d(point3);
+        assertThat(output).isEqualTo(expected, withPrecision(0.01));
+    }
 }
