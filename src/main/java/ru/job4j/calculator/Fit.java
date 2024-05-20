@@ -5,11 +5,29 @@ public class Fit {
     private static final short BASE_HEIGHT_WOMAN = 110;
     private static final double WEIGHT_COEFFICIENT = 1.15;
 
-    public static double manWeight(short height) {
+    /**
+     * Вычисляет идеальный вес для мужчины на основе его роста.
+     *
+     * @param height рост мужчины в сантиметрах.
+     * @return идеальный вес в килограммах.
+     */
+    public static double manWeight(int height) {
+        if (height < BASE_HEIGHT_MAN) {
+            throw new IllegalArgumentException("Рост должен быть больше базового роста для мужчин.");
+        }
         return (height - BASE_HEIGHT_MAN) * WEIGHT_COEFFICIENT;
     }
 
-    public static double womanWeight(short height) {
+    /**
+     * Вычисляет идеальный вес для женщины на основе её роста.
+     *
+     * @param height рост женщины в сантиметрах.
+     * @return идеальный вес в килограммах.
+     */
+    public static double womanWeight(int height) {
+        if (height < BASE_HEIGHT_WOMAN) {
+            throw new IllegalArgumentException("Рост должен быть больше базового роста для женщин.");
+        }
         return (height - BASE_HEIGHT_WOMAN) * WEIGHT_COEFFICIENT;
     }
 
